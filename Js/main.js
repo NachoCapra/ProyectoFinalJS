@@ -179,11 +179,11 @@ window.onload = function(){
   }
 }
 
-//fetch
+//comentarios
 
 const cardpost = document.querySelector('.cardPost')
 
-fetch("../js/data.json")
+fetch("../Js/data.json")
 .then((res) => res.json())
 .then((data) =>{
   data.forEach((personas) =>{
