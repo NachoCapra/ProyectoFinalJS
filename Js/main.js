@@ -1,20 +1,20 @@
-const cardpost = document.querySelector('.cardPost')
+// const cardpost = document.querySelector('.cardPost')
 
-fetch("../js/data.json")
-.then((res) => res.json())
-.then((data) =>{
-  data.forEach((personas) =>{
-    const contenido = document.createElement('div')
-    contenido.innerHTML = `
-    <hr><div class="card-body comment-post">
-                              <h5 class="card-title text-center">${personas.nombre}</h5>
-                              <p class="card-text mt-4">${personas.comentario}</p>
-                            </div>
-    `
+// fetch("../js/data.json")
+// .then((res) => res.json())
+// .then((data) =>{
+//   data.forEach((personas) =>{
+//     const contenido = document.createElement('div')
+//     contenido.innerHTML = `
+//     <hr><div class="card-body comment-post">
+//                               <h5 class="card-title text-center">${personas.nombre}</h5>
+//                               <p class="card-text mt-4">${personas.comentario}</p>
+//                             </div>
+//     `
 
-    cardpost.append(contenido)
-  })
-})
+//     cardpost.append(contenido)
+//   })
+// })
 
   
 
@@ -178,3 +178,23 @@ window.onload = function(){
     renderCarrito()
   }
 }
+
+//fetch
+
+const cardpost = document.querySelector('.cardPost')
+
+fetch("../js/data.json")
+.then((res) => res.json())
+.then((data) =>{
+  data.forEach((personas) =>{
+    const contenido = document.createElement('div')
+    contenido.innerHTML = `
+    <hr><div class="card-body comment-post">
+                              <h5 class="card-title text-center">${personas.nombre}</h5>
+                              <p class="card-text mt-4">${personas.comentario}</p>
+                            </div>
+    `
+
+    cardpost.append(contenido)
+  })
+})
